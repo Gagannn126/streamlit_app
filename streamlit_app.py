@@ -36,6 +36,7 @@ try:
 except URLError as e:
     streamlit.error()
 
+streamlit.header("Fruit load list contains:s")
 
 def get_fruit_load_list():
     with my_cnx.cursor() as my_cur:
@@ -49,7 +50,6 @@ if streamlit.button('get fruit load list'):
 
 streamlit.stop()
 
-streamlit.header("Add a fruit of your choice")
 
 
 add_fruit=streamlit.text_input('Type fruit to add','jackfruit')
